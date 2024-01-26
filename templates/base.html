@@ -1,0 +1,104 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+      type="text/css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      type="text/css"
+    />
+
+    <link rel="stylesheet" href="../../../static/css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kanit:wght@300&family=Raleway&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="data:," />
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+      crossorigin="anonymous"
+    ></script>
+
+    <title>{% block title %}Soulspark{% endblock %}</title>
+  </head>
+
+  <body>
+    {% block header %}
+    <header>
+      <!-- Logo and top color with title-->
+      <div class="row no-gutters sticky">
+        <a class="col-sm-12 col-md-4 col-lg-4 logo" href="/">
+          <!-- Sign in and out, links -->
+        </a>
+        <div class="col-sm-12 col-md-8 col-lg-8">
+          <div>
+            <br />
+            {% if user.is_authenticated %}
+            <ul class="account">
+              <li class="sign_in">
+                <a href="{% url 'account_email' %}">Change E-mail</a>
+              </li>
+              <li class="sign_in">
+                <a href="{% url 'account_logout' %}">Sign Out</a>
+              </li>
+              {% else %}
+              <li class="sign_in">
+                <a href="{% url 'account_login' %}">Sign In</a>
+              </li>
+              <li class="sign_in">
+                <a href="{% url 'account_signup' %}">Sign Up</a>
+              </li>
+            </ul>
+            {% endif %}
+
+            <!-- Sign for alert user that sign in was successful-->
+            {% if messages %} {% for message in messages %}
+            <br />
+            <div class="alert alert-success" role="alert">{{ message }}</div>
+            {% endfor %} {% endif %}
+          </div>
+        </div>
+      </div>
+
+      <!-- Menu line -->
+      <div class="row links no-gutters">
+        <div class="col-12">
+          <ul id="nav" class="list-inline menucontainer">
+            <li class="col-sm-6 col-md-3 col-lg-3 list-inline-item menu-link">
+              <a href="{% url 'index' %}"><span>Home</span></a>
+            </li>
+            <li class="col-sm-6 col-md-3 col-lg-3 list-inline-item menu-link">
+              <a href="{% url 'reviews' %}"><span>Reviews</span></a>
+            </li>
+            <li class="col-sm-6 col-md-3 col-lg-3 list-inline-item menu-link">
+              <a href="{% url 'prices' %}"><span>Prices</span></a>
+            </li>
+            <li class="col-sm-6 col-md-3 col-lg-3 list-inline-item menu-link">
+              <a href="{% url 'contact' %}"><span>Contact</span></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    {% endblock %}
+
+    <div id="content">{% block content %}{% endblock %}</div>
+  </body>
+</html>
