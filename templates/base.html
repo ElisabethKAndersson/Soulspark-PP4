@@ -18,7 +18,7 @@
       type="text/css"
     />
 
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
     <link
       href="https://fonts.googleapis.com/css2?family=Kanit:wght@300&family=Raleway&display=swap"
       rel="stylesheet"
@@ -39,41 +39,79 @@
     <title>{% block title %}Soulspark{% endblock %}</title>
   </head>
 
-  <body>
+ 
     {% block header %}
     <header>
-      <!-- Logo and top color with title-->
-        <div class="container"></div>
-            <div class="row no-gutters sticky">
-                <img src="/static/images/{'soulsparklogo.jfif'}" class="img-fluid logo" >
-                <!-- Sign in and out, links -->
-                </a>
-                <div class="col-sm-12 col-md-8 col-lg-8">
-                <div>
-                    <br />
-
-            <!-- Menu line -->
-            <div class="row links no-gutters">
-                <div class="col-12">
-                <ul id="nav" class="list-inline menucontainer">
-                    <li class="col-sm-6 col-md-3 col-lg-3 list-inline-item menu-link">
-                    <a href="#"><span>Home</span></a>
-                    </li>
-                    <li class="col-sm-6 col-md-3 col-lg-3 list-inline-item menu-link">
-                    <a href="#"><span>Reviews</span></a>
-                    </li>
-                    <li class="col-sm-6 col-md-3 col-lg-3 list-inline-item menu-link">
-                    <a href="#"><span>Prices</span></a>
-                    </li>
-                    <li class="col-sm-6 col-md-3 col-lg-3 list-inline-item menu-link">
-                    <a href="#"><span>Contact</span></a>
-                    </li>
-                </ul>
-                </div>
-            </div>
-    </header>
+    <!-- Logo and top color with title-->
+    <div class="container top-nav w-100">
+        <div class col></div>
+        <ul class="nav nav-pills mb-3 mt-3 " id="pills-tab" role="tablist">
+            <li class="nav-item">
+            <a
+                class="nav-link active"
+                id="pills-home-tab"
+                data-toggle="pill"
+                href="#pills-home"
+                role="tab"
+                aria-controls="pills-home"
+                aria-selected="true"
+                >Home</a
+            >
+            </li>
+            <li class="nav-item">
+            <a
+                class="nav-link"
+                id="pills-profile-tab"
+                data-toggle="pill"
+                href="#pills-profile"
+                role="tab"
+                aria-controls="pills-profile"
+                aria-selected="false"
+                >Profile</a
+            >
+            </li>
+            <li class="nav-item">
+            <a
+                class="nav-link"
+                id="pills-contact-tab"
+                data-toggle="pill"
+                href="#pills-contact"
+                role="tab"
+                aria-controls="pills-contact"
+                aria-selected="false"
+                >Contact</a
+            >
+            </li>
+        </ul>
+      <div class="tab-content" id="pills-tabContent">
+        <div
+          class="tab-pane fade show active"
+          id="pills-home"
+          role="tabpanel"
+          aria-labelledby="pills-home-tab"
+        >
+          ...
+        </div>
+        <div
+          class="tab-pane fade"
+          id="pills-profile"
+          role="tabpanel"
+          aria-labelledby="pills-profile-tab"
+        >
+          ...
+        </div>
+        <div
+          class="tab-pane fade"
+          id="pills-contact"
+          role="tabpanel"
+          aria-labelledby="pills-contact-tab"
+        ></div>
+      </div>
+    </div>
     {% endblock %}
-
-    <div id="content">{% block content %}{% endblock %}</div>
+  </header>   
+  <body>
+    {% block content %} {% endblock %} {% block postloadjs %} 
+    {% endblock %}
   </body>
 </html>
