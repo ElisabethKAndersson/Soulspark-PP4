@@ -1,0 +1,85 @@
+body {
+    background-color: #edeae5;
+    font-family: 'Raleway', sans-serif;
+}
+
+/*--------------------------------------------Base */
+header {
+    background-color: #026670;
+    background-size: cover;
+}
+
+
+.menu-link {
+    background-color: #9fedd7;
+    margin: 0;
+}
+
+.list-inline-item:not(:last-child) {
+    margin: 0;
+}
+
+.menucontainer {
+    font-size: 0;
+    margin: 0;
+}
+
+#nav li {
+    font-size: 20px;
+    text-align: center;
+    padding: 0;
+    height: 50px;
+    padding-top: 10px;
+}
+
+li a {
+    color: black;
+    list-style-type: none;
+}
+
+
+.sign_in a {
+    color: #edeae5;
+    font-size: 12px;
+    font-weight: bold;
+    float: right;
+    margin-right: 10px;
+}
+
+
+/*--------------------------------------------Index */
+
+.image {
+    background: url(../images/sussie.jpg);
+    margin-top: 50px;
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: contain;
+    min-height: 300px;
+}
+
+.presentation_text {
+    max-width: 500px;
+    margin-top: 50px;
+    margin-left: 250px;
+}
+
+
+/*--------------------------------------------Reviews */
+
+
+
+
+/*--------------------------------------------Prices*/
+.list-text {
+    margin: 0 auto;
+}
+
+.room {
+    background: url(../images/preview_.jfif);
+    margin-top: 50px;
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: contain;
+    min-height: 300px;
+}

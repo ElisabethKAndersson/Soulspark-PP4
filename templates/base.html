@@ -18,7 +18,7 @@
       type="text/css"
     />
 
-    <link rel="stylesheet" href="../../../static/css/style.css" />
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <link
       href="https://fonts.googleapis.com/css2?family=Kanit:wght@300&family=Raleway&display=swap"
       rel="stylesheet"
@@ -43,33 +43,34 @@
     {% block header %}
     <header>
       <!-- Logo and top color with title-->
-      <div class="row no-gutters sticky">
-        <a class="col-sm-12 col-md-4 col-lg-4 logo" href="/">
-          <!-- Sign in and out, links -->
-        </a>
-        <div class="col-sm-12 col-md-8 col-lg-8">
-          <div>
-            <br />
+        <div class="container"></div>
+            <div class="row no-gutters sticky">
+                <img src="/static/images/{'soulsparklogo.jfif'}" class="img-fluid logo" >
+                <!-- Sign in and out, links -->
+                </a>
+                <div class="col-sm-12 col-md-8 col-lg-8">
+                <div>
+                    <br />
 
-      <!-- Menu line -->
-      <div class="row links no-gutters">
-        <div class="col-12">
-          <ul id="nav" class="list-inline menucontainer">
-            <li class="col-sm-6 col-md-3 col-lg-3 list-inline-item menu-link">
-              <a href="#"><span>Home</span></a>
-            </li>
-            <li class="col-sm-6 col-md-3 col-lg-3 list-inline-item menu-link">
-              <a href="#"><span>Reviews</span></a>
-            </li>
-            <li class="col-sm-6 col-md-3 col-lg-3 list-inline-item menu-link">
-              <a href="#"><span>Prices</span></a>
-            </li>
-            <li class="col-sm-6 col-md-3 col-lg-3 list-inline-item menu-link">
-              <a href="#"><span>Contact</span></a>
-            </li>
-          </ul>
-        </div>
-      </div>
+            <!-- Menu line -->
+            <div class="row links no-gutters">
+                <div class="col-12">
+                <ul id="nav" class="list-inline menucontainer">
+                    <li class="col-sm-6 col-md-3 col-lg-3 list-inline-item menu-link">
+                    <a href="#"><span>Home</span></a>
+                    </li>
+                    <li class="col-sm-6 col-md-3 col-lg-3 list-inline-item menu-link">
+                    <a href="#"><span>Reviews</span></a>
+                    </li>
+                    <li class="col-sm-6 col-md-3 col-lg-3 list-inline-item menu-link">
+                    <a href="#"><span>Prices</span></a>
+                    </li>
+                    <li class="col-sm-6 col-md-3 col-lg-3 list-inline-item menu-link">
+                    <a href="#"><span>Contact</span></a>
+                    </li>
+                </ul>
+                </div>
+            </div>
     </header>
     {% endblock %}
 
